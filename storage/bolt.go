@@ -36,6 +36,10 @@ func NewBoltDB(filePath string) ClientImplCloser {
 	})
 	expect.Nil(err)
 	db.NoSync = true
+	return NewBoltDBRaw(db)
+}
+
+func NewBoltDBRaw(db *bbolt.DB) ClientImplCloser {
 	return &boltClient{db}
 }
 
