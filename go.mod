@@ -1,4 +1,4 @@
-module github.com/anacrolix/torrent
+module github.com/CAFxX/torrent
 
 go 1.24
 
